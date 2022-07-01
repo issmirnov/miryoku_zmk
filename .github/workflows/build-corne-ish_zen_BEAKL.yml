@@ -1,0 +1,14 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Build corne-ish_zen BEAKL'
+on: workflow_dispatch
+jobs:
+  build:
+    # uses: issmirnov/zmk-config-miryoku/.github/workflows/main.yml@master
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["corne-ish_zen_left","corne-ish_zen_right"]'
+      alphas: '["BEAKL15"]'
+      clipboard: '["mac"]'
