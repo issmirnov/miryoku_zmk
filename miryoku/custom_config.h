@@ -41,7 +41,7 @@ MIRYOKU_X(MEDIA,  "Media") \
 MIRYOKU_X(NUM,    "Nump") \
 MIRYOKU_X(SYM,    "Sym1") \
 MIRYOKU_X(FUN,    "Func") \
-/* MIRYOKU_X(GAME,   "Game") */
+MIRYOKU_X(GAME,   "Game")
 
 #define U_BASE   0
 #define U_EXTRA  1
@@ -53,7 +53,7 @@ MIRYOKU_X(FUN,    "Func") \
 #define U_NUM    7
 #define U_SYM    8
 #define U_FUN    9
-/* #define U_GAME   10 */
+#define U_GAME   10
 
 
 
@@ -133,8 +133,8 @@ U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp S
 // Layer 7 is Function, we use the default.
 
 // Layer 8: Game layer (to be used in future)
-/* #define MIRYOKU_LAYER_GAME \ */
-/* &kp F12,           &kp F7,            &kp F8,            &kp F9,            &kp PSCRN,         U_NA,              U_NA,              U_NA,              U_NA,              &bootloader,       \ */
-/* &kp F11,           &kp F4,            &kp F5,            &kp F6,            &kp SLCK,          U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \ */
-/* &kp F10,           &kp F1,            &kp F2,            &kp F3,            &kp PAUSE_BREAK,   U_NA,              U_NA,              U_NA,              &kp RALT,          U_NA,              \ */
-/* U_NP,              U_NP,              &kp K_APP,         &kp SPC,           &kp TAB,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP */
+#define MIRYOKU_LAYER_GAME \
+&kp F12,           &kp F7,            &kp F8,            &kp F9,  &kp F9,     &kp F9,               &kp PSCRN,         U_NA,              U_NA,              U_NA,              U_NA,              &bootloader,       \
+&kp F11,           &kp F4,            &kp F5,            &kp F6,  &kp F6,     &kp F6,               &kp SLCK,          U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
+&kp F10,           &kp F1,            &kp F2,            &kp F3,  &kp F3,     &kp F3,               &kp PAUSE_BREAK,   U_NA,              U_NA,              U_NA,              &kp RALT,          U_NA,              \
+U_NP,              U_NP,              &kp K_APP,         &kp SPC, &kp SPC,    &kp SPC,              &kp TAB,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
