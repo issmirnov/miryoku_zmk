@@ -134,7 +134,7 @@ U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp S
 
 // Layer 8: Game layer (to be used in future)
 #define MIRYOKU_LAYER_GAME \
-&kp F12,           &kp F7,            &kp F8,            &kp F9,  &kp F9,     &kp F9,               &kp PSCRN,         U_NA,              U_NA,              U_NA,              U_NA,              &bootloader,       \
-&kp F11,           &kp F4,            &kp F5,            &kp F6,  &kp F6,     &kp F6,               &kp SLCK,          U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
-&kp F10,           &kp F1,            &kp F2,            &kp F3,  &kp F3,     &kp F3,               &kp PAUSE_BREAK,   U_NA,              U_NA,              U_NA,              &kp RALT,          U_NA,              \
-U_NP,              U_NP,              &kp K_APP,         &kp SPC, &kp SPC,    &kp SPC,              &kp TAB,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
+&kp CARET,         &kp AT,           &kp EXCL,          &kp QMARK,         &kp PLUS,          U_NA,U_NA,U_NA,              U_NA,              U_NA,              U_NA,              &bootloader,       \
+&kp COLON,         &kp MINUS,        &kp LPAR,          &kp RPAR,          &kp PIPE,          U_NA,U_NA,U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
+&kp LESS_THAN,     &kp GREATER_THAN, &kp LBKT,          &kp RBKT,          &kp AMPERSAND,     U_NA,U_NA,U_NA,              U_NA,              U_NA,              &kp RALT,          U_NA,              \
+U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp SEMICOLON,     U_NA,U_NA,U_NA,              U_NA,              U_NA,              U_NP,              U_NP
