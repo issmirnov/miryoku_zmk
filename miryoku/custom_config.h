@@ -55,6 +55,28 @@ MIRYOKU_X(FUN,    "Func") \
 #define U_FUN    9
 /* #define U_GAME   10 */
 
+
+
+// Custom mapping for game layer
+// See https://github.com/manna-harbour/miryoku/discussions/85, "To change the mapping for all layers" under Miryoku ZMK
+
+#if defined (MIRYOKU_LAYOUTMAPPING_CORNE) // only enable for corne.
+#if !defined (MIRYOKU_LAYERMAPPING_GAME)
+#define MIRYOKU_LAYERMAPPING_GAME( \
+     K00, K01, K02, K03, K04, K05,    K06, K07, K08, K09, K10, K11, \
+     K12, K13, K14, K15, K16, K17,    K18, K19, K20, K21, K22, K23, \
+     K24, K25, K26, K27, K28, K29,    N30, N31, K32, K33, K34, K35, \
+                    K36, K37, N38,    N39, N40, N41 \
+) \
+K00  K01  K02  K03  K04  K05       K06  K07  K08  K09  K10  K11 \
+K12  K13  K14  K15  K16  K17       K18  K19  K20  K21  K22  K23 \
+K24  K25  K26  K27  K28  K29       K30  K31  K32  K33  K34  K35 \
+               K36, K37, N38,      N39, N40, N41
+
+
+#endif // !defined (MIRYOKU_LAYERMAPPING_GAME)
+#endif // defined (MIRYOKU_LAYOUTMAPPING_CORNE)
+//
 // *********************
 // LAYER DEFINITIONS
 // **********************
