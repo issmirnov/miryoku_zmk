@@ -113,7 +113,7 @@ U_NP,              U_NP,              &lt U_NUM ESC,     &lt U_NAV SPC,     &lt 
 // Layer 1
 #define MIRYOKU_LAYER_BUTTON \
 U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
-&kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         &none,             &none,             &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
+&kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         &to U_GAME,             &none,             &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
 U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
 U_NP,              U_NP,              U_BTN2,            U_BTN3,            U_BTN1,            U_BTN1,            U_BTN3,            U_BTN2,            U_NP,              U_NP
 
@@ -154,7 +154,7 @@ U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp S
 // Note: this is a 3x6 layer. Above, we define MIRYOKU_LAYERMAPPING_GAME which maps in the outer column only for this layer.
 // This layer is used for left half only gaming for overwatch, with discord mappings and push to talk mapped instead of some letters.
 #define MIRYOKU_LAYER_GAME \
-&kp Q,  &kp W,    &kp E,    &kp R,      &kp T,              U_NA,     U_NA,     U_NA,   U_NA,   &to 0,  \
+&kp Q,  &kp W,    &kp E,    &kp R,      &kp T,              U_NA,     U_NA,     U_NA,   U_NA,   &to U_BASE,  \
 &kp A,  &kp S,    &kp D,    &kp F,      &kp P,              U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
 &kp Z,  &kp X,    &kp C,    &kp V,      &kp GRAVE,          U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
 U_NP,   U_NP,     &kp H,    &kp LCTRL,  &kp R,              U_NA,     U_NA,     U_NA,   U_NP,   U_NP
