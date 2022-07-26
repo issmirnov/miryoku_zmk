@@ -50,7 +50,7 @@ MIRYOKU_X(MEDIA,  "Media") \
 MIRYOKU_X(NUM,    "Nump") \
 MIRYOKU_X(SYM,    "Sym1") \
 MIRYOKU_X(FUN,    "Func") \
-MIRYOKU_X(GAME,   "Game")
+/* MIRYOKU_X(GAME,   "Game") */
 
 #define U_BASE   0
 #define U_EXTRA  1
@@ -62,30 +62,30 @@ MIRYOKU_X(GAME,   "Game")
 #define U_NUM    7
 #define U_SYM    8
 #define U_FUN    9
-#define U_GAME   10
+/* #define U_GAME   10 */
 
 
 
-// Custom mapping for game layer
-// See https://github.com/manna-harbour/miryoku/discussions/85, "To change the mapping for all layers" under Miryoku ZMK
-#if defined (MIRYOKU_KEYBOARD_CORNE) // only enable for corne.
+/* // Custom mapping for game layer */
+/* // See https://github.com/manna-harbour/miryoku/discussions/85, "To change the mapping for all layers" under Miryoku ZMK */
+/* #if defined (MIRYOKU_KEYBOARD_CORNE) // only enable for corne. */
 
-// Note: we have to split the layer definition, and specify the outer column keys in this define, while the rest of the
-// keycodes go into a standard layer (see MIRYOKU_LAYER_GAME below).
-// What happens under the hood is that when the mapping is evaluated, the KNN (K00, K01 etc) defined keys are merged with the
-// outer column keys we specify here.
-#define MIRYOKU_LAYERMAPPING_GAME( \
-     K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \
-     K10, K11, K12, K13, K14,      K15, K16, K17, K18, K19, \
-     K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \
-     N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \
-) \
-&kp TAB     K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  XXX \
-&kp LCTRL   K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  XXX \
-&kp LSHIFT  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
-               K32  K33  K34       K35  K36  K37
+/* // Note: we have to split the layer definition, and specify the outer column keys in this define, while the rest of the */
+/* // keycodes go into a standard layer (see MIRYOKU_LAYER_GAME below). */
+/* // What happens under the hood is that when the mapping is evaluated, the KNN (K00, K01 etc) defined keys are merged with the */
+/* // outer column keys we specify here. */
+/* #define MIRYOKU_LAYERMAPPING_GAME( \ */
+/*      K00, K01, K02, K03, K04,      K05, K06, K07, K08, K09, \ */
+/*      K10, K11, K12, K13, K14,      K15, K16, K17, K18, K19, \ */
+/*      K20, K21, K22, K23, K24,      K25, K26, K27, K28, K29, \ */
+/*      N30, N31, K32, K33, K34,      K35, K36, K37, N38, N39 \ */
+/* ) \ */
+/* &kp TAB     K00  K01  K02  K03  K04       K05  K06  K07  K08  K09  XXX \ */
+/* &kp LCTRL   K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  XXX \ */
+/* &kp LSHIFT  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \ */
+/*                K32  K33  K34       K35  K36  K37 */
 
-#endif // defined (MIRYOKU_KEYBOARD_CORNE)
+/* #endif // defined (MIRYOKU_KEYBOARD_CORNE) */
 
 
 // *********************
@@ -146,8 +146,8 @@ U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp S
 // Layer 8: Game layer
 // Note: this is a 3x6 layer. Above, we define MIRYOKU_LAYERMAPPING_GAME which maps in the outer column only for this layer.
 // This layer is used for left half only gaming for overwatch, with discord mappings and push to talk mapped instead of some letters.
-#define MIRYOKU_LAYER_GAME \
-&kp Q,  &kp W,    &kp E,    &kp R,      &kp T,              U_NA,     U_NA,     U_NA,   U_NA,   &to 0,  \
-&kp A,  &kp S,    &kp D,    &kp F,      &kp P,              U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
-&kp Z,  &kp X,    &kp C,    &kp V,      &kp GRAVE,          U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
-U_NP,   U_NP,     &kp H,    &kp LCTRL,  &kp R,              U_NA,     U_NA,     U_NA,   U_NP,   U_NP
+/* #define MIRYOKU_LAYER_GAME \ */
+/* &kp Q,  &kp W,    &kp E,    &kp R,      &kp T,              U_NA,     U_NA,     U_NA,   U_NA,   &to 0,  \ */
+/* &kp A,  &kp S,    &kp D,    &kp F,      &kp P,              U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \ */
+/* &kp Z,  &kp X,    &kp C,    &kp V,      &kp GRAVE,          U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \ */
+/* U_NP,   U_NP,     &kp H,    &kp LCTRL,  &kp R,              U_NA,     U_NA,     U_NA,   U_NP,   U_NP */
