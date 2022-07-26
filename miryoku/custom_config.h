@@ -5,26 +5,35 @@
 
 #pragma once
 
+// **********************
+//     ZMK core options
+// **********************
+// If you want to patch Combo behavior, uncomment these defaults and change them.
+// Docs: https://zmk.dev/docs/config/combos#kconfig
+//
+// #define ZMK_COMBO_MAX_KEYS_PER_COMBO 4
+// #define ZMK_COMBO_MAX_COMBOS_PER_KEY 5
+// #define ZMK_COMBO_MAX_PRESSED_COMBOS 4
 
-// Define our build options here as well, so that we can compile ZMK locally.
+// Disable layer indicator widget.
+// #define CONFIG_CUSTOM_WIDGET_LAYER_STATUS n
+
+// Define our miryoku build options here, so that we can compile ZMK locally.
 // WARNING: be sure these options match the github workflow, otherwise there will be problems.
 #define MIRYOKU_ALPHAS_BEAKL15
 #define MIRYOKU_CLIPBOARD_MAC
 
 
-// https://github.com/manna-harbour/miryoku/discussions/85
-// Swapping layers:
+// We make use of the custom layer mechanism discussed in #85.
+// Docs: https://github.com/manna-harbour/miryoku/discussions/85
+// Swapping layers tips:
 //   Don't just blindly copy paste from the miryoku_layer_alternatives.h. You MUST
 //   match the layer names here to the ones expcted in miryoku_layer_selection.h.
 //   So, MIRYOKU_ALTERNATIVES_SYM becoms MIRYOKU_LAYER_SYM
 //   Note, in doing so we lose the ability to do Flip, Inverted T, and other option toggles.
+//   However, we can simply remap the define to the inverted or flipped layer directly as needed
+//   See layer 4 for the example of how we flip media.
 
-#define ZMK_COMBO_MAX_KEYS_PER_COMBO 4
-#define ZMK_COMBO_MAX_COMBOS_PER_KEY 5
-#define ZMK_COMBO_MAX_PRESSED_COMBOS 4
-
-// Disable layer indicator widget.
-// #define CONFIG_CUSTOM_WIDGET_LAYER_STATUS n
 
 
 // *********************
@@ -59,7 +68,6 @@ MIRYOKU_X(GAME,   "Game")
 
 // Custom mapping for game layer
 // See https://github.com/manna-harbour/miryoku/discussions/85, "To change the mapping for all layers" under Miryoku ZMK
-
 #if defined (MIRYOKU_KEYBOARD_CORNE) // only enable for corne.
 
 // Note: we have to split the layer definition, and specify the outer column keys in this define, while the rest of the
@@ -78,15 +86,16 @@ MIRYOKU_X(GAME,   "Game")
                K32  K33  K34       K35  K36  K37
 
 #endif // defined (MIRYOKU_KEYBOARD_CORNE)
-//
+
+
 // *********************
 // LAYER DEFINITIONS
 // **********************
 
-/* // Layer 0 is in main BEAKL config. BUT, we swapped NUM and MEDIA triggers to get the symbol layer to work. */
-/* // As this would break other user's expected workflows, we keep this change here and don't contribute upstream. */
-/* // The config pasted below is identical to the canonical BEAKL15 defined in miryoku, except for the two thumb keys swapped */
-/* // TODO: Look into this, see if there's a way to keep the same config and JUST swap the two keys. */
+// Layer 0 is in main BEAKL config. BUT, we swapped NUM and MEDIA triggers to get the symbol layer to work.
+// As this would break other user's expected workflows, we keep this change here and don't contribute upstream.
+// The config pasted below is identical to the canonical BEAKL15 defined in miryoku, except for the two thumb keys swapped
+// TODO: Look into this, see if there's a way to keep the same config and JUST swap the two keys.
 #define MIRYOKU_LAYER_BASE \
 &kp Q,             &kp H,             &kp O,             &kp U,             &kp X,             &kp G,             &kp C,             &kp R,             &kp F,             &kp Z,             \
 &hm LGUI Y,        &hm LALT I,        &hm LCTRL E,       &hm LSHFT A,       &kp DOT,           &kp D,             &hm LSHFT S,       &hm LCTRL T,       &hm LALT N,        &hm LGUI B,        \
@@ -116,7 +125,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 #define MIRYOKU_LAYER_MEDIA MIRYOKU_ALTERNATIVES_MEDIA_FLIP
 
 
-// Layer 5
+// Layer 5: Number layer, traditional numpad on the right and useful symbols above home row on the left
 #define MIRYOKU_LAYER_NUM \
 &kp COLON,         &kp SLASH,         &kp COMMA,         &kp DOT,           &kp ASTERISK,      &kp COMMA,          &kp NUM_7,         &kp NUM_8,         &kp NUM_9,         &kp EQL,        \
 &kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         U_NA,              &kp NUM_0,          &kp NUM_4,         &kp NUM_5,         &kp NUM_6,         U_NA,           \
@@ -124,7 +133,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              &kp ENTER,          &kp NUM_0,         &kp DOT,           U_NP,              U_NP
 
 
-// Layer 6
+// Layer 6: Symbol layer. Uses thumb cluster as well.
 #define MIRYOKU_LAYER_SYM \
 &kp CARET,         &kp AT,           &kp EXCL,          &kp QMARK,         &kp PLUS,          U_NA,              U_NA,              U_NA,              U_NA,              &bootloader,       \
 &kp COLON,         &kp MINUS,        &kp LPAR,          &kp RPAR,          &kp PIPE,          U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
