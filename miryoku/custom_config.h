@@ -70,6 +70,10 @@ MIRYOKU_X(GAME,   "Game")
 // See https://github.com/manna-harbour/miryoku/discussions/85, "To change the mapping for all layers" under Miryoku ZMK
 #if defined (MIRYOKU_KEYBOARD_CORNE) // only enable for corne.
 
+
+// Define convenience mapping to block out keys.
+#define XXX &none
+
 // Note: we have to split the layer definition, and specify the outer column keys in this define, while the rest of the
 // keycodes go into a standard layer (see MIRYOKU_LAYER_GAME below).
 // What happens under the hood is that when the mapping is evaluated, the KNN (K00, K01 etc) defined keys are merged with the
