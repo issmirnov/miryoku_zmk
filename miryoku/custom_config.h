@@ -147,11 +147,7 @@ U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp S
 // Note: this is a 3x6 layer. Above, we define MIRYOKU_LAYERMAPPING_GAME which maps in the outer column only for this layer.
 // This layer is used for left half only gaming for overwatch, with discord mappings and push to talk mapped instead of some letters.
 #define MIRYOKU_LAYER_GAME \
-&kp CARET,         &kp AT,           &kp EXCL,          &kp QMARK,         &kp PLUS,          U_NA,              U_NA,              U_NA,              U_NA,              &bootloader,       \
-&kp COLON,         &kp MINUS,        &kp LPAR,          &kp RPAR,          &kp PIPE,          U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
-&kp LESS_THAN,     &kp GREATER_THAN, &kp LBKT,          &kp RBKT,          &kp AMPERSAND,     U_NA,              U_NA,              U_NA,              &kp RALT,          U_NA,              \
-U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp SEMICOLON,     U_NA,              U_NA,              U_NA,              U_NP,              U_NP
-/* &kp Q,  &kp W,    &kp E,    &kp R,      &kp T,              U_NA,     U_NA,     U_NA,   U_NA,   &to 0,  \ */
-/* &kp A,  &kp S,    &kp D,    &kp F,      &kp P,              U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \ */
-/* &kp Z,  &kp X,    &kp C,    &kp V,      &kp GRAVE,          U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \ */
-/* U_NP,   U_NP,     &kp H,    &kp LCTRL,  &kp R,              U_NA,     U_NA,     U_NA,   U_NP,   U_NP */
+&kp Q,  &kp W,    &kp E,    &kp R,      &kp T,              U_NA,     U_NA,     U_NA,   U_NA,   &to 0,  \
+&kp A,  &kp S,    &kp D,    &kp F,      &kp P,              U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
+&kp Z,  &kp X,    &kp C,    &kp V,      &kp GRAVE,          U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
+U_NP,   U_NP,     &kp H,    &kp LCTRL,  &kp R,              U_NA,     U_NA,     U_NA,   U_NP,   U_NP
