@@ -68,7 +68,7 @@ MIRYOKU_X(GAME,   "Game")
 
 // Custom mapping for game layer
 // See https://github.com/manna-harbour/miryoku/discussions/85, "To change the mapping for all layers" under Miryoku ZMK
-#if defined (MIRYOKU_KEYBOARD_CORNE) // only enable for corne.
+#if defined (MIRYOKU_KEYBOARD_CORNE_ISH_ZEN) // only enable for corne-ish zen.
 
 
 // Define convenience mapping to block out keys.
@@ -89,6 +89,9 @@ MIRYOKU_X(GAME,   "Game")
 &kp LSHIFT  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  XXX \
                K32  K33  K34       K35  K36  K37
 
+#else
+  // Allow us to build for other physical keyboards without issues.
+  #define MIRYOKU_LAYERMAPPING_GAME MIRYOKU_MAPPING
 #endif // defined (MIRYOKU_KEYBOARD_CORNE)
 
 
