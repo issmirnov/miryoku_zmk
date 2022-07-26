@@ -150,4 +150,4 @@ U_NP,              U_NP,             &kp DOLLAR,        &kp EQL,           &kp S
 &kp Q,  &kp W,    &kp E,    &kp R,      &kp T,              U_NA,     U_NA,     U_NA,   U_NA,   &to 0,  \
 &kp A,  &kp S,    &kp D,    &kp F,      &kp P,              U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
 &kp Z,  &kp X,    &kp C,    &kp V,      &kp GRAVE,          U_NA,     U_NA,     U_NA,   U_NA,   U_NA,   \
-U_NP,   U_NP,     &kp H     &kp LCTRL,  &kp R               U_NA      U_NA,     U_NA,   U_NP,   U_NP
+U_NP,   U_NP,     &kp H,    &kp LCTRL,  &kp R,              U_NA,     U_NA,     U_NA,   U_NP,   U_NP
