@@ -11,10 +11,22 @@ jobs:
     with:
       board: '["seeeduino_xiao"]'
       shield: '[
+<<<<<<< HEAD
         "chipper_left","chipper_right",
+||||||| b0fd704
+=======
+        "bad_wings",
+        "chipper_left","chipper_right",
+>>>>>>> upstream/master
         "clog_v2_left","clog_v2_right",
         "hummingbird",
+<<<<<<< HEAD
         "kpukboard_left","kpukboard_right",
+||||||| b0fd704
+=======
+        "klein_left","klein_right",
+        "kpukboard_left","kpukboard_right",
+>>>>>>> upstream/master
         "revxlp",
         "rommana_left","rommana_right",
         "totem_left","totem_right",
